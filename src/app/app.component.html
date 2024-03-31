@@ -1,5 +1,6 @@
 <ul
   class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion"
+  [ngClass]="{ toggled: commonUtils.isSideMenuCollapsed }"
   id="accordionSidebar"
   app-main-sidebar
 ></ul>
