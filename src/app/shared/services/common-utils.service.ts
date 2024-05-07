@@ -4,9 +4,14 @@ import { Injectable, Renderer2 } from '@angular/core';
   providedIn: 'root',
 })
 export class CommonUtilsService {
-  //
+  /**
+   * Sidemenu colaspsed state
+   */
   isSideMenuCollapsed: boolean = false;
 
+  /**
+   * CSS class for the sidebars toggle state
+   */
   private CLASS_SIDEBAR_TOGGLED: string = 'sidebar-toggled';
 
   constructor() {}
@@ -17,7 +22,6 @@ export class CommonUtilsService {
    *
    */
   toggleSideMenuCollapse() {
-    console.log('HERE we are', '2');
     // remove body class
     document.body.classList.contains(this.CLASS_SIDEBAR_TOGGLED)
       ? document.body.classList.remove(this.CLASS_SIDEBAR_TOGGLED)
