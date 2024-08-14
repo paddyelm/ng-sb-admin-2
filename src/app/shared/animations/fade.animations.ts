@@ -1,27 +1,24 @@
 import { trigger, transition, style, animate } from '@angular/animations';
 
 export const fadeInFadeOutAnimation = trigger('fadeInFadeOut', [
-  transition('xxxx', [
-    style(
-      { opacity: 0, display: 'block' }
-      // { backgroundColor: 'red' }
-    ),
-    animate('1000ms', style({ opacity: 1 })),
+  transition('fadein', [
+    style({ opacity: 0, display: 'block' }),
+    animate(1000, style({ opacity: 1 })),
   ]),
-  transition('yyyy', [
-    animate(
-      '1000ms',
-      style(
-        { opacity: 0 }
-        // { backgroundColor: 'red' }
-      )
-    ),
-    style(
-      { display: 'none' }
-      // { backgroundColor: 'blue' }
-    ),
+  transition('fadeout', [
+    animate(1000, style({ opacity: 0 })),
+    style({ display: 'none' }),
   ]),
 ]);
+
+// trigger('fade', [
+//   transition('void => active', [
+//     // using status here for transition
+//     style({ opacity: 0 }),
+//     animate(1000, style({ opacity: 1 })),
+//   ]),
+//   transition('* => void', [animate(1000, style({ opacity: 0 }))]),
+// ]);
 
 export const fadeInAnimation = trigger('fadeInAnimation', [
   transition(':enter', [
